@@ -10,60 +10,60 @@ export * from './effect';
 
 export interface EditData {
   /**
-   * @description 时间轴编辑数据
+   * @description Timeline editing data
    */
   editorData: TimelineRow[];
   /**
-   * @description 时间轴动作效果map
+   * @description Timeline action effects map
    */
   effects: Record<string, TimelineEffect>;
   /**
-   * @description 单个刻度标记范畴（>0）
+   * @description Single scale mark range (>0)
    * @default 1
    */
   scale?: number;
   /**
-   * @description 最少刻度个数（>=1）
+   * @description Minimum scale count (>=1)
    * @default 20
    */
   minScaleCount?: number;
   /**
-   * @description 最大刻度个数（>=minScaleCount）
+   * @description Maximum scale count (>=minScaleCount)
    * @default Infinity
    */
   maxScaleCount?: number;
   /**
-   * @description 单个刻度细分单元数（>0整数）
+   * @description Number of subdivision units per scale (>0 integer)
    * @default 10
    */
   scaleSplitCount?: number;
   /**
-   * @description 单个刻度的显示宽度（>0, 单位：px）
+   * @description Display width of single scale (>0, unit: px)
    * @default 160
    */
   scaleWidth?: number;
   /**
-   * @description 刻度开始距离左侧的距离（>=0, 单位：px）
+   * @description Distance from left side where scale starts (>=0, unit: px)
    * @default 20
    */
   startLeft?: number;
   /**
-   * @description 每个编辑行默认高度（>0, 单位：px）
+   * @description Default height of each editing row (>0, unit: px)
    * @default 32
    */
   rowHeight?: number;
   /**
-   * @description 是否启动网格移动吸附
+   * @description Whether to enable grid movement snapping
    * @default false
    */
   gridSnap?: boolean;
   /**
-   * @description 启动拖拽辅助线吸附
+   * @description Enable drag assist line snapping
    * @default false
    */
   dragLine?: boolean;
   /**
-   * @description 是否隐藏光标
+   * @description Whether to hide cursor
    * @default false
    */
   hideCursor?: boolean;

@@ -1,27 +1,27 @@
 ---
-title: 介绍
+title: Introduction
 toc: 'menu'
 ---
 
 
 ## react timeline editor
 
-`react-timeline-editor` 是基于react开发的，用于快速搭建时间线编辑能力的组件。
+`react-timeline-editor` is a React-based component for quickly building timeline editing capabilities.
 
-主要可用于构建动画编辑器、视频编辑器等。
+It can be mainly used to build animation editors, video editors, etc.
 
 ![timeline](/assets/timeline.gif)
 
 
-## ✨ 特性
+## ✨ Features
 
-- 🛠 支持拖拽、缩放模式，并提供方便的控制钩子。
-- 🔗 提供网格吸附能力、辅助线吸附等交互能力。
-- 🏷 自动识别动作长度，并无限滚动。
-- 🎨 可快速便捷定制样式。
-- 📡 提供强解藕的运行器能力，可脱离编辑器独立运行。
+- 🛠 Supports drag and zoom modes, and provides convenient control hooks.
+- 🔗 Provides grid snapping and auxiliary line snapping interactive capabilities.
+- 🏷 Automatically recognizes action length and provides infinite scrolling.
+- 🎨 Quick and convenient style customization.
+- 📡 Provides strongly decoupled engine capability that can run independently from the editor.
 
-## 快速上手
+## Quick Start
 
 ```
 npm install @xzdarcy/react-timeline-editor

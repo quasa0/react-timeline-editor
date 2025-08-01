@@ -13,9 +13,9 @@ export type EditRowProps = CommonProp & {
   style?: React.CSSProperties;
   dragLineData: DragLineData;
   setEditorData: (params: TimelineRow[]) => void;
-  /** 距离左侧滚动距离 */
+  /** Distance from left scroll */
   scrollLeft: number;
-  /** 设置scroll left */
+  /** Set scroll left */
   deltaScrollLeft: (scrollLeft: number) => void;
 };
 

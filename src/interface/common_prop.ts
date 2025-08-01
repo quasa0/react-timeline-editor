@@ -1,13 +1,13 @@
 import { EditData } from "./timeline";
 
-/** 组件公共参数 */
+/** Common component props */
 export interface CommonProp extends EditData {
-  /** 刻度个数 */
+  /** Scale count */
   scaleCount: number;
-  /** 设置刻度个数 */
+  /** Set scale count */
   setScaleCount: (scaleCount: number) => void;
-  /** 光标时间 */
+  /** Cursor time */
   cursorTime: number;
-  /** 当前时间轴宽度 */
+  /** Current timeline width */
   timelineWidth: number;
 }

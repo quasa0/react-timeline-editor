@@ -10,7 +10,7 @@ export interface DragLineData {
 
 export type DragLineProps = DragLineData & {scrollLeft: number};
 
-/** 拖拽辅助线 */
+/** Drag assist lines */
 export const DragLines: FC<DragLineProps> = ({
   isMoving,
   movePositions = [],

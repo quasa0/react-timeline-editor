@@ -36,18 +36,18 @@ export const Timeline = React.forwardRef<TimelineState, TimelineEditor>((props, 
   const areaRef = useRef<HTMLDivElement>();
   const scrollSync = useRef<ScrollSync>();
 
-  // 编辑器数据
+  // Editor data
   const [editorData, setEditorData] = useState(data);
-  // scale数量
+  // Scale count
   const [scaleCount, setScaleCount] = useState(MIN_SCALE_COUNT);
-  // 光标距离
+  // Cursor time
   const [cursorTime, setCursorTime] = useState(START_CURSOR_TIME);
-  // 是否正在运行
+  // Whether playing
   const [isPlaying, setIsPlaying] = useState(false);
-  // 当前时间轴宽度
+  // Current timeline width
   const [width, setWidth] = useState(Number.MAX_SAFE_INTEGER);
 
-  /** 监听数据变化 */
+  /** Listen for data changes */
   useLayoutEffect(() => {
     handleSetScaleCount(getScaleCountByRows(data, { scale }));
     setEditorData(data);
@@ -70,13 +70,13 @@ export const Timeline = React.forwardRef<TimelineState, TimelineEditor>((props, 
     scrollSync.current && scrollSync.current.setState({ scrollTop: scrollTop });
   }, [scrollTop]);
 
-  /** 动态设置scale count */
+  /** Dynamically set scale count */
   const handleSetScaleCount = (value: number) => {
     const data = Math.min(maxScaleCount, Math.max(minScaleCount, value));
     setScaleCount(data);
   };
 
-  /** 处理主动数据变化 */
+  /** Handle active data changes */
   const handleEditorDataChange = (editorData: TimelineRow[]) => {
     const result = onChange(editorData);
     if (result !== false) {
@@ -85,7 +85,7 @@ export const Timeline = React.forwardRef<TimelineState, TimelineEditor>((props, 
     }
   };
 
-  /** 处理光标 */
+  /** Handle cursor */
   const handleSetCursor = (param: { left?: number; time?: number; updateTime?: boolean }) => {
     let { left, time, updateTime = true } = param;
     if (typeof left === 'undefined' && typeof time === 'undefined') return;
@@ -104,15 +104,15 @@ export const Timeline = React.forwardRef<TimelineState, TimelineEditor>((props, 
     return result;
   };
 
-  /** 设置scrollLeft */
+  /** Set scrollLeft */
   const handleDeltaScrollLeft = (delta: number) => {
-    // 当超过最大距离时，禁止自动滚动
+    // Disable auto scroll when exceeding maximum distance
     const data = scrollSync.current.state.scrollLeft + delta;
     if (data > scaleCount * (scaleWidth - 1) + startLeft - width) return;
     scrollSync.current && scrollSync.current.setState({ scrollLeft: Math.max(scrollSync.current.state.scrollLeft + delta, 0) });
   };
 
-  // 处理运行器相关数据
+  // Handle engine related data
   useEffect(() => {
     const handleTime = ({ time }) => {
       handleSetCursor({ time, updateTime: false });
@@ -124,7 +124,7 @@ export const Timeline = React.forwardRef<TimelineState, TimelineEditor>((props, 
     engineRef.current.on('paused', handlePaused);
   }, []);
 
-  // ref 数据
+  // ref data
   useImperativeHandle(ref, () => ({
     get target() {
       return domRef.current;
@@ -153,7 +153,7 @@ export const Timeline = React.forwardRef<TimelineState, TimelineEditor>((props, 
     },
   }));
 
-  // 监听timeline区域宽度变化
+  // Listen for timeline area width changes
   useEffect(() => {
     if (areaRef.current) {
       const resizeObserver = new ResizeObserver(() => {
