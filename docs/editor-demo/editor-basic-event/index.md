@@ -1,13 +1,13 @@
 ---
-title: 基础事件处理
+title: Basic Event Handling
 toc: 'menu'
 order: 6
 ---
 
-> 你可以通过处理action、row的点击、双击、右键回调来扩展能力
+> You can extend capabilities by handling click, double-click, and right-click callbacks for actions and rows
 > 
-> 下面是一些demo：
+> Below are some demos:
 
-### 双击添加新动作
+### Double-click to Add New Action
 
 <code src="./index.tsx"></code>

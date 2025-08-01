@@ -1,5 +1,5 @@
 ---
-title: 动作配置
+title: Action Configuration
 order: 2
 toc: 'menu'
 ---
@@ -7,12 +7,12 @@ toc: 'menu'
 
 ### movable & flexible
 
-> 你可以通过控制动作的`movable`、`flexible`属性来控制动作是否可移动或缩放
+> You can control whether actions can be moved or resized by controlling the `movable` and `flexible` properties of actions
 
 <code src="./index.tsx"></code>
 
 ### minStart & maxEnd
 
-> 你可以通过`maxEnd`、`minStart` 控制动作的移动范围
+> You can control the movement range of actions through `maxEnd` and `minStart`
 
 <code src="./index2.tsx"></code>

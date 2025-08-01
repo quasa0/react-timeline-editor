@@ -1,18 +1,18 @@
 ---
-title: 刻度自定义
+title: Scale Customization
 toc: 'menu'
 order: 1
 ---
 
-### 刻度自定义
+### Scale Customization
 
-+ scale: 单个刻度标记范畴(>0)
-+ scaleSplitCount: 单个刻度细分单元数（>0整数）
-+ scaleWidth: 单个刻度的显示宽度（>0, 单位：px）
-+ startLeft: 刻度开始距离左侧的距离（>=0, 单位：px）
++ scale: Single scale mark range (>0)
++ scaleSplitCount: Number of subdivision units per scale (>0 integer)
++ scaleWidth: Display width of single scale (>0, unit: px)
++ startLeft: Distance from left side where scale starts (>=0, unit: px)
 
 <code src="./index.tsx"></code>
 
-### 自定义刻度样式
+### Custom Scale Styles
 
 <code src="./custom.tsx"></code>

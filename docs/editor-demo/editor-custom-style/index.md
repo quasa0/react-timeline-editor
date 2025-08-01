@@ -1,13 +1,13 @@
 ---
-title: 自定义样式
+title: Custom Styles
 order: 2
 ---
 
 
-### 自定义样式
+### Custom Styles
 
-> 你可以通过`getActionRender`自定义指定动作的渲染
+> You can customize the rendering of specific actions through `getActionRender`
 > 
-> 同时你可以通过复写css，定义className等方式覆盖样式
+> You can also override styles by rewriting CSS, defining className, etc.
 
 <code src="./index.tsx"></code>

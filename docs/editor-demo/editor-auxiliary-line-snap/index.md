@@ -1,11 +1,11 @@
 ---
-title: 辅助线吸附
+title: Auxiliary Line Snap
 order: 4
 ---
 
 
-### 辅助线吸附
+### Auxiliary Line Snap
 
-> 启用辅助线吸附后，移动到其他action或cursor附近会自动吸附。
+> After enabling auxiliary line snap, moving near other actions or cursor will automatically snap.
 
 <code src="./index.tsx"></code>

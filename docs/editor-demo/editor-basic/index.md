@@ -1,23 +1,23 @@
 ---
-title: 基本使用
+title: Basic Usage
 toc: 'menu'
 order: 0
 group: 
-  title: 编辑器示例
+  title: Editor Examples
 ---
 
-### 基本使用
+### Basic Usage
 
-> 尝试向右拖动动作块，可自动识别无限滚动延长
+> Try dragging action blocks to the right, it can automatically recognize infinite scroll extension
 
 <code src="./index.tsx"></code>
 
-### 禁止编辑
+### Disable Editing
 
-> 禁止拖拽动作块
+> Disable dragging action blocks
 
 <code src="./disable.tsx"></code>
 
-### 隐藏光标
+### Hide Cursor
 
 <code src="./hideCursor.tsx"></code>

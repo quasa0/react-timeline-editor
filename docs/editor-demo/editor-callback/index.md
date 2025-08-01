@@ -1,12 +1,12 @@
 ---
-title: 移动、缩放回调
+title: Move & Resize Callbacks
 order: 5
 ---
 
-### 移动、缩放回调
+### Move & Resize Callbacks
 
-> 你可以通过定义移动、缩放回调，自定义拖拽前、拖住时、拖拽结束的各种能力
+> You can customize various capabilities before dragging, during dragging, and after dragging ends by defining move and resize callbacks
 > 
-> 下面是一个通过回调，阻止拖拽右侧缩放条的demo：
+> Below is a demo that uses callbacks to prevent dragging the right resize handle:
 
 <code src="./index.tsx"></code>

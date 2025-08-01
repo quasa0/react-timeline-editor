@@ -1,10 +1,10 @@
 ---
-title: 滚动同步
+title: Scroll Sync
 order: 7
 ---
 
-### 滚动同步
+### Scroll Sync
 
-> 可以在编辑器周边创建列表等结构，并与时间轴滚动同步
+> You can create structures like lists around the editor and synchronize scrolling with the timeline
 
 <code src="./index.tsx"></code>

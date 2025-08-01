@@ -1,10 +1,10 @@
 ---
-title: 自动滚动
+title: Auto Scroll
 order: 9
 ---
 
-### 自动滚动
+### Auto Scroll
 
-> 拖动时鼠标超出timeline范围后，可自动滚动。
+> When dragging and the mouse goes beyond the timeline range, it can auto scroll.
 
 <code src="./index.tsx"></code>

@@ -1,11 +1,11 @@
 ---
-title: 网格吸附
+title: Grid Snap
 order: 3
 ---
 
 
-### 网格吸附
+### Grid Snap
 
-> 启用网格吸附后，会按细分单元吸附移动
+> After enabling grid snap, movement will snap to subdivision units
 
 <code src="./index.tsx"></code>
