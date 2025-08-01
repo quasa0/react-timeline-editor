@@ -7,17 +7,17 @@ import { RowDnd } from '../row_rnd/row_rnd';
 import { RowRndApi } from '../row_rnd/row_rnd_interface';
 import './cursor.less';
 
-/** 动画时间轴组件参数 */
+/** Animation timeline component props */
 export type CursorProps = CommonProp & {
-  /** 距离左侧滚动距离 */
+  /** Distance from left scroll */
   scrollLeft: number;
-  /** 设置光标位置 */
+  /** Set cursor position */
   setCursor: (param: { left?: number; time?: number }) => boolean;
-  /** 时间轴区域dom ref */
+  /** Timeline area DOM ref */
   areaRef: React.MutableRefObject<HTMLDivElement>;
-  /** 设置scroll left */
+  /** Set scroll left */
   deltaScrollLeft: (delta: number) => void;
-  /** 滚动同步ref（TODO: 该数据用于临时解决scrollLeft拖住时不同步问题） */
+  /** Scroll sync ref (TODO: This data is used to temporarily solve the scroll left drag sync issue) */
   scrollSync: React.MutableRefObject<ScrollSync>;
 };
 
@@ -43,7 +43,7 @@ export const Cursor: FC<CursorProps> = ({
 
   useEffect(() => {
     if (typeof draggingLeft.current === 'undefined') {
-      // 非dragging时，根据穿参更新cursor刻度
+      // When not dragging, update cursor scale based on passed parameters
       rowRnd.current.updateLeft(parserTimeToPixel(cursorTime, { startLeft, scaleWidth, scale }) - scrollLeft);
     }
   }, [cursorTime, startLeft, scaleWidth, scale, scrollLeft]);
@@ -75,11 +75,11 @@ export const Cursor: FC<CursorProps> = ({
         const scrollLeft = scrollSync.current.state.scrollLeft;
 
         if (!scroll || scrollLeft === 0) {
-          // 拖拽时，如果当前left < left min，将数值设置为 left min
+          // When dragging, if current left < left min, set value to left min
           if (left < startLeft - scrollLeft) draggingLeft.current = startLeft - scrollLeft;
           else draggingLeft.current = left;
         } else {
-          // 自动滚动时，如果当前left < left min，将数值设置为 left min
+          // When auto scrolling, if current left < left min, set value to left min
           if (draggingLeft.current < startLeft - scrollLeft - scroll) {
             draggingLeft.current = startLeft - scrollLeft - scroll;
           }

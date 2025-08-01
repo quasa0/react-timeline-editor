@@ -1,37 +1,37 @@
 ---
-title: 介绍
+title: Introduction
 toc: 'menu'
 group: 
-  title: 运行器
+  title: Engine
 ---
 
-## 运行器
+## Engine
 
-我们提供了解藕于编辑器的运行器，用于运行编辑器生产的数据。
+We provide an engine decoupled from the editor for running data produced by the editor.
 
-你可以通过定义每个<code><a href="/data#timelineeffect">TimelineEffect</a></code>中的运行能力（音频播放、动画播放等等），来实现你自己的运行体系。
+You can implement your own runtime system by defining the runtime capabilities (audio playback, animation playback, etc.) in each <code><a href="/data#timelineeffect">TimelineEffect</a></code>.
 
-+ 🛠 提供设置时间、设置运行速率等能力
-+ ⚙️ 可独立使用
++ 🛠 Provides capabilities such as setting time, setting playback rate, etc.
++ ⚙️ Can be used independently
 
 
-## 示例
+## Examples
 
-你可以在以下两种场景中使用运行器：
+You can use the engine in the following two scenarios:
 
-### 编辑时运行
-> 编辑器内置了一个运行器，提供了<code><a href="/data#timelinestate">TimelineState</a></code>用于更便捷的操控运行器。
+### Runtime During Editing
+> The editor has a built-in engine and provides <code><a href="/data#timelinestate">TimelineState</a></code> for more convenient engine control.
 > 
-> 我们不提供默认的运行器样式，你需要自定义样式
+> We don't provide default engine styles, you need to customize the styles
 > 
-> 你可以通过监听器，很轻松的获取运行数据变化，从而定制自己的运行器样式
+> You can easily get runtime data changes through listeners to customize your own engine styles
 
 <code src="./engine-basic/index.tsx"></code>
 
-### 独立使用
+### Standalone Usage
 
-> 你也可以在任意地方使用运行器运行编辑器生产的数据
+> You can also use the engine anywhere to run data produced by the editor
 > 
-> 这对于当你想要<b style="color: #a87654">编辑时</b>和<b style="color: #a87654">运行时</b>共用一套数据和运行能力时非常有用
+> This is very useful when you want to share the same data and runtime capabilities between <b style="color: #a87654">editing time</b> and <b style="color: #a87654">runtime</b>
 
 <code src="./engine-standalone/index.tsx"></code>

@@ -5,23 +5,23 @@ import { CommonProp } from '../../interface/common_prop';
 import { prefix } from '../../utils/deal_class_prefix';
 import './time_area.less';
 
-/** 动画时间轴组件参数 */
+/** Animation timeline component props */
 export type TimeAreaProps = CommonProp & {
-  /** 左侧滚动距离 */
+  /** Left scroll distance */
   scrollLeft: number;
-  /** 滚动回调，用于同步滚动 */
+  /** Scroll callback for sync scrolling */
   onScroll: (params: OnScrollParams) => void;
-  /** 设置光标位置 */
+  /** Set cursor position */
   setCursor: (param: { left?: number; time?: number }) => void;
 };
 
-/** 动画时间轴组件 */
+/** Animation timeline component */
 export const TimeArea: FC<TimeAreaProps> = ({ setCursor, maxScaleCount, hideCursor, scale, scaleWidth, scaleCount, scaleSplitCount, startLeft, scrollLeft, onClickTimeArea, getScaleRender }) => {
   const gridRef = useRef<Grid>();
-  /** 是否显示细分刻度 */
+  /** Whether to show subdivision scales */
   const showUnit = scaleSplitCount > 0;
 
-  /** 获取每个cell渲染内容 */
+  /** Get each cell render content */
   const cellRenderer: GridCellRenderer = ({ columnIndex, key, style }) => {
     const isShowScale = showUnit ? columnIndex % scaleSplitCount === 0 : true;
     const classNames = ['time-unit'];
@@ -38,7 +38,7 @@ export const TimeArea: FC<TimeAreaProps> = ({ setCursor, maxScaleCount, hideCurs
     gridRef.current?.recomputeGridSize();
   }, [scaleWidth, startLeft]);
 
-  /** 获取列宽 */
+  /** Get column width */
   const getColumnWidth = (data: { index: number }) => {
     switch (data.index) {
       case 0:
@@ -79,7 +79,7 @@ export const TimeArea: FC<TimeAreaProps> = ({ setCursor, maxScaleCount, hideCurs
 
                   const time = parserPixelToTime(left, { startLeft, scale, scaleWidth });
                   const result = onClickTimeArea && onClickTimeArea(time, e);
-                  if (result === false) return; // 返回false时阻止设置时间
+                  if (result === false) return; // Prevent setting time when returning false
                   setCursor({ time });
                 }}
                 className={prefix('time-area-interact')}

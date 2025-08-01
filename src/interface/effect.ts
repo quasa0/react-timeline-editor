@@ -2,41 +2,41 @@ import { TimelineEngine } from "../engine/engine";
 import { TimelineAction } from "./action";
 
 export interface TimelineEffect {
-  /** 效果id */
+  /** Effect ID */
   id: string, 
-  /** 效果名称 */
+  /** Effect name */
   name?: string, 
-  /** 效果运行代码 */
+  /** Effect runtime code */
   source?: TimeLineEffectSource,
 }
 
 export interface EffectSourceParam {
-  /** 当前时间 */
+  /** Current time */
   time: number,
-  /** 是否正在运行 */
+  /** Whether running */
   isPlaying: boolean,
-  /** 动作 */
+  /** Action */
   action: TimelineAction,
-  /** 动作效果 */
+  /** Action effect */
   effect: TimelineEffect,
-  /** 运行引擎 */
+  /** Runtime engine */
   engine: TimelineEngine,
 }
 
 /**
- * 效果执行回调
+ * Effect execution callback
  * @export
  * @interface TimeLineEffectSource
  */
 export interface TimeLineEffectSource {
-  /** 在当前动作时间区域开始播放时回调 */
+  /** Callback when playback starts in current action time range */
   start?: (param: EffectSourceParam) => void;
-  /** 时间进入动作时执行回调 */
+  /** Callback executed when time enters action */
   enter?: (param: EffectSourceParam) => void;
-  /** 动作更新时回调 */
+  /** Callback when action updates */
   update?: (param: EffectSourceParam) => void;
-  /** 时间离开动作时执行回调 */
+  /** Callback executed when time leaves action */
   leave?: (param: EffectSourceParam) => void;
-  /** 在当前动作时间区域停止播放时回调 */
+  /** Callback when playback stops in current action time range */
   stop?: (param: EffectSourceParam) => void;
 }

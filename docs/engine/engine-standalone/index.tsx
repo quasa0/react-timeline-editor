@@ -37,7 +37,7 @@ const TimelineEditor = () => {
     };
   }, []);
 
-  // 开始或暂停
+      // Start or pause
   const handlePlayOrPause = () => {
     if (!timelineEngine.current) return;
     if (timelineEngine.current.isPlaying) {
@@ -52,7 +52,7 @@ const TimelineEditor = () => {
     timelineEngine.current.reRender();
   }
 
-  // 时间展示
+          // Time display
   const timeRender = (time: number) => {
     const float = (parseInt((time % 1) * 100 + '') + '').padStart(2, '0');
     const min = (parseInt(time / 60 + '') + '').padStart(2, '0');
