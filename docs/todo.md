@@ -2,18 +2,18 @@
 title: TODO
 ---
 
-### 功能拓展
+### Feature Extensions
 
-- [ ] 缩放时间轴（可通过控制scale实现，要提供对外wheel回调？）
-- [x] 点击时将时间作为参数传入
-- [x] 迁移样式渲染: 从effects => props, 提供更强大的样式拓展能力
-- [x] 允许自定义时间区域渲染能力
+- [ ] Zoom timeline (can be implemented by controlling scale, need to provide external wheel callback?)
+- [x] Pass time as parameter when clicking
+- [x] Migrate style rendering: from effects => props, provide more powerful style extension capabilities
+- [x] Allow custom time area rendering capabilities
 
 
-### 设计拓展
-- [ ] 考虑如何兼容以下常见的帧动画编辑器的交互模式，以及是否有必要兼容（下面为初步考虑的兼容实现方案）
-  - [ ] action 数据结构变化
-    - [ ] 方案1: 转先前的start、end 为 points集合
-    - [ ] 方案2: 新增group概念，用于将action分组
-  - [ ] 运行器多时间单位适配能力（s/帧）
+### Design Extensions
+- [ ] Consider how to be compatible with the following common frame animation editor interaction modes, and whether it is necessary to be compatible (below are preliminary considered compatibility implementation solutions)
+  - [ ] Action data structure changes
+    - [ ] Solution 1: Convert previous start, end to points collection
+    - [ ] Solution 2: Add group concept to group actions
+  - [ ] Engine multi-time unit adaptation capability (s/frames)
 ![aim](/assets/aim.png)

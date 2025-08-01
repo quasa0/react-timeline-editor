@@ -14,8 +14,8 @@ const TimelineEditor = () => {
   return (
     <div className="timeline-editor-example9">
       <Switch
-        checkedChildren="开启自动滚动"
-        unCheckedChildren="禁用自动滚动"
+        checkedChildren="Enable auto scroll"
+        unCheckedChildren="Disable auto scroll"
         checked={autoScroll}
         onChange={(e) => setAutoScroll(e)}
         style={{ marginBottom: 20 }}

@@ -16,8 +16,8 @@ const TimelineEditor = () => {
       <Switch
         style={{ marginBottom: 12 }}
         checked={dragLine}
-        checkedChildren="开启辅助线"
-        unCheckedChildren="禁用辅助线"
+        checkedChildren="Enable assist lines"
+        unCheckedChildren="Disable assist lines"
         onChange={setDragLine}
       />
       <Timeline

@@ -1,54 +1,54 @@
 ---
 title: API
 group: 
-  title: 运行器
+  title: Engine
 ---
 
-## 运行器 API
+## Engine API
 
 ### isPlaying
 
-`boolean` 运行器是否正在运行
+`boolean` Whether the engine is currently running
 
 ### isPaused
 
-`boolean` 运行器是否停止
+`boolean` Whether the engine is stopped
 
 ### effects
 
-*setter*  <code>Record<string,<a href="/data#timelineeffect">TimelineEffect</a>></code> 运行效果
+*setter*  <code>Record<string,<a href="/data#timelineeffect">TimelineEffect</a>></code> Runtime effects
 
 ### data
 
-*setter*  <code><a href="/data#timelinerow">TimelineRow</a>[]</code> 运行数据
+*setter*  <code><a href="/data#timelinerow">TimelineRow</a>[]</code> Runtime data
 
 ### setPlayRate
 
-`(rate: number) => void` 设置播放速率
+`(rate: number) => void` Set playback rate
 
 ### getPlayRate
 
-`() => number` 获取播放速率
+`() => number` Get playback rate
 
 ### setTime
 
-`(time: number) => void` 设置播放时间
+`(time: number) => void` Set playback time
 
 ### getTime
 
-`() => number` 获取播放时间
+`() => number` Get playback time
 
 ### reRender
 
-`() => void` 重新渲染当前时间
+`() => void` Re-render current time
 
 ### play
 
 `(param: {toTime?: number; autoEnd?: boolean}) => boolean` 
 
-从当前time开始播放（可通过`setTime`设置），返回是否播放成功
-+ toTime (可选): 播放截止时间 
-+ autoEnd (可选): 是否在播完全部actions后自动停止
+Start playing from current time (can be set via `setTime`), returns whether playback started successfully
++ toTime (optional): Playback end time 
++ autoEnd (optional): Whether to auto stop after playing all actions
 
 ```ts | pure
 import { TimelineEngine } from '@xzdarcy/react-timeline-editor';
@@ -58,54 +58,54 @@ engine.play({autoEnd: true})
 
 ### pause
 
-`() => void` 暂停
+`() => void` Pause
 
 ### listener
 
-你可以监听运行器提供的一些事件，并响应逻辑
+You can listen to some events provided by the engine and respond with logic
 
 ```ts | pure
 import { TimelineEngine } from '@xzdarcy/react-timeline-editor';
 const engine = new TimelineEngine();
 ```
 
-+ `setTimeByTick`: 运行器tick引起的时间变化
++ `setTimeByTick`: Time changes caused by engine tick
 ```ts | pure
 engine.on('setTimeByTick', ({time, engine}) => {...})
 ```
 
-+ `beforeSetTime`: 设置时间前(手动)(可通过`return false`阻止设置)
++ `beforeSetTime`: Before setting time (manual) (can prevent setting by `return false`)
 ```ts | pure
 engine.on('beforeSetTime', ({time, engine}) => {...})
 ```
 
-+ `afterSetTime`: 设置时间后(手动)
++ `afterSetTime`: After setting time (manual)
 ```ts | pure
 engine.on('afterSetTime', ({time, engine}) => {...})
 ```
 
-+ `beforeSetPlayRate`: 设置运行速率前(可通过`return false`阻止设置)
++ `beforeSetPlayRate`: Before setting playback rate (can prevent setting by `return false`)
 ```ts | pure
 engine.on('beforeSetPlayRate', ({rate, engine}) => {...})
 ```
 
-+ `afterSetPlayRate`: 设置运行速率后
++ `afterSetPlayRate`: After setting playback rate
 ```ts | pure
 engine.on('afterSetPlayRate', ({rate, engine}) => {...})
 
 ```
 
-+ `play`: 监听运行事件
++ `play`: Listen to play events
 ```ts | pure
 engine.on('play', ({engine}) => {...})
 ```
 
-+ `paused`: 监听暂停事件
++ `paused`: Listen to pause events
 ```ts | pure
 engine.on('paused', ({engine}) => {...})
 ```
 
-+ `ended`: 监听播放完成事件
++ `ended`: Listen to playback completion events
 ```ts | pure
 engine.on('ended', ({engine}) => {...})
 ```

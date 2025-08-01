@@ -18,7 +18,7 @@ const TimelineEditor = () => {
         hideCursor={false}
         getActionRender={(action) => {
           if(action.id === 'action10') {
-            return <div className="prompt">只能拖拽左侧缩放</div>
+            return <div className="prompt">Can only drag left side to resize</div>
           }
         }}
         onActionResizing={({action, dir}) => {

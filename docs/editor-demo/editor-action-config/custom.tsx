@@ -5,10 +5,10 @@ export const CustomRender0: FC<{ action: TimelineAction; row: TimelineRow }> =
   ({ action, row }) => {
     return (
       <div className={'effect0'}>
-        <div className={`effect0-text`}>{`播放音频: ${(
+        <div className={`effect0-text`}>{`Play audio: ${(
           action.end - action.start
-        ).toFixed(2)}s ${action.movable === false ? '（不可移动）' : ''} ${
-          action.flexible === false ? '（不可缩放）' : ''
+        ).toFixed(2)}s ${action.movable === false ? '(Not movable)' : ''} ${
+          action.flexible === false ? '(Not resizable)' : ''
         }`}</div>
       </div>
     );

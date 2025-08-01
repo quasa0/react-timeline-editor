@@ -14,8 +14,8 @@ const TimelineEditor = () => {
   return (
     <div className="timeline-editor-example0">
       <Switch
-        checkedChildren="开启编辑"
-        unCheckedChildren="禁用编辑"
+        checkedChildren="Enable editing"
+        unCheckedChildren="Disable editing"
         checked={allow}
         onChange={(e) => setAllow(e)}
         style={{ marginBottom: 20 }}

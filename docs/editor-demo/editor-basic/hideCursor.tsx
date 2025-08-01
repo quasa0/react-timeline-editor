@@ -14,8 +14,8 @@ const TimelineEditor = () => {
   return (
     <div className="timeline-editor-example0">
       <Switch
-        checkedChildren="开启光标"
-        unCheckedChildren="隐藏光标"
+        checkedChildren="Show cursor"
+        unCheckedChildren="Hide cursor"
         checked={showCursor}
         onChange={e => setShowCursor(e)}
         style={{marginBottom: 20}}

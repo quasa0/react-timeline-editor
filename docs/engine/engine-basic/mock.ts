@@ -20,7 +20,7 @@ export interface CusTomTimelineRow extends TimelineRow {
 export const mockEffect: Record<string, TimelineEffect> = {
   effect0: {
     id: 'effect0',
-    name: '播放音效',
+    name: 'Play sound effect',
     source: {
       start: ({ action, engine, isPlaying, time }) => {
         if (isPlaying) {
@@ -46,7 +46,7 @@ export const mockEffect: Record<string, TimelineEffect> = {
   },
   effect1: {
     id: 'effect1',
-    name: '播放动画',
+    name: 'Play animation',
     source: {
       enter: ({ action, time }) => {
         const src = (action as CustomTimelineAction).data.src;
@@ -75,7 +75,7 @@ export const mockData: CusTomTimelineRow[] = [
         effectId: 'effect1',
         data: {
           src: '/lottie/lottie1/data.json',
-          name: '点赞',
+          name: 'Thumbs up',
         },
       },
     ],
@@ -90,7 +90,7 @@ export const mockData: CusTomTimelineRow[] = [
         effectId: 'effect1',
         data: {
           src: '/lottie/lottie2/data.json',
-          name: '工作',
+          name: 'Work',
         },
       },
     ],
@@ -105,7 +105,7 @@ export const mockData: CusTomTimelineRow[] = [
         effectId: 'effect1',
         data: {
           src: '/lottie/lottie3/data.json',
-          name: '奶牛',
+          name: 'Cow',
         },
       },
     ],
@@ -120,7 +120,7 @@ export const mockData: CusTomTimelineRow[] = [
         effectId: 'effect0',
         data: {
           src: '/audio/bg.mp3',
-          name: '背景音乐',
+          name: 'Background music',
         },
       },
     ],

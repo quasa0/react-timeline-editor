@@ -16,11 +16,11 @@ const reg = new RegExp(/TimelineState|TimelineAction|TimelineRow|TimelineEffect|
 
 const LOCALE_TEXTS = {
   'zh-CN': {
-    name: '属性名',
-    description: '描述',
-    type: '类型',
-    default: '默认值',
-    required: '(必选)',
+    name: 'Property Name',
+    description: 'Description',
+    type: 'Type',
+    default: 'Default Value',
+    required: '(Required)',
   },
   'en-US': {
     name: 'Name',

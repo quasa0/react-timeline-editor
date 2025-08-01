@@ -71,7 +71,7 @@ export const mockData: CusTomTimelineRow[] = [
         effectId: 'effect1',
         data: {
           src: '/lottie/lottie1/data.json',
-          name: '点赞',
+          name: 'Thumbs up',
         },
       },
     ],
@@ -86,7 +86,7 @@ export const mockData: CusTomTimelineRow[] = [
         effectId: 'effect1',
         data: {
           src: '/lottie/lottie2/data.json',
-          name: '工作',
+          name: 'Work',
         },
       },
     ],
@@ -101,7 +101,7 @@ export const mockData: CusTomTimelineRow[] = [
         effectId: 'effect1',
         data: {
           src: '/lottie/lottie3/data.json',
-          name: '奶牛',
+          name: 'Cow',
         },
       },
     ],
@@ -116,7 +116,7 @@ export const mockData: CusTomTimelineRow[] = [
         effectId: 'effect0',
         data: {
           src: '/audio/bg.mp3',
-          name: '背景音乐',
+          name: 'Background music',
         },
       },
     ],
